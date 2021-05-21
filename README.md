@@ -1,1 +1,2 @@
-# react-video-notes-helper
+# React Video Notes Assistant
+
