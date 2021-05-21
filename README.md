@@ -1,2 +1,2 @@
-Video Notes Taking Assistant
+# Video Notes Taking Assistant
 
