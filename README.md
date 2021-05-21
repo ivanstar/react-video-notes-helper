@@ -1,2 +1,2 @@
-# React Video Notes Assistant
+Video Notes Taking Assistant
 
