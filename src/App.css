@@ -71,100 +71,10 @@ h1 {
     align-items: center;
     width: 1000px;
     margin-left: 15%;
-    
+    padding-bottom: 5%;
 }
 
 
 
 
 /* Notes Styling */
-
-.tc-notes {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    
-}
-
-.tc-note {
-    background-color: #f0c806;
-    border-radius: 8px;
-    width: 180px;
-    margin: 0 10px 20px;
-    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
-    transition: all 0.5s;
-    cursor: pointer;
-    font-family: 'Caveat', cursive;
-}
-.tc-note:hover {
-    background-color: yellow;
-  }
-
-.tc-note-header {
-    padding: 10px 16px 0;
-}
-.tc-note-close {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    line-height: 24px;
-    text-align: center;
-    transition: all 0.3s;
-}
-
-.tc-cancel{
-    float:right;
-    margin: 0.5em;
-    cursor: pointer;
-    z-index: 1;
-    position :relative;
-}
-
-
-      
-.tc-note-title {
-    font-size: 14px;
-    padding-top: 10px;
-    padding-bottom: -50%;
-    font-weight: bold;
-    text-align: center;
-    position: relative;
-    display: block;
-    word-wrap: break-word;
-
-}
-
-.tc-note-title::after {
-    content: '';
-    display: block;
-    width: 85%;
-    height: 1px;
-    margin: 0.3em auto 1em;
-    background: black;
-    
-}
-.tc-note-body {
-    font-size: 12px;
-    padding: 10px 16px 16px;
-    word-wrap: break-word;
-    text-align: center;
-}     
-
-.timestamp-btn{
-    background-color: transparent;
-    border-radius: 5px;
-    border: 1px solid yellow;
-    cursor:pointer;
-    font-family: 'Caveat', cursive;
-    display: block;
-    margin-left: 30px;
-    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
-
-}
-
-.timestampers{
-    float:right;
-    
-}

@@ -1,3 +1,4 @@
+  
 import { useState } from 'react'
 
 const AddNotes = ({addNote, time}) => {
@@ -28,4 +29,3 @@ const AddNotes = ({addNote, time}) => {
 }
 
 export default AddNotes
- 

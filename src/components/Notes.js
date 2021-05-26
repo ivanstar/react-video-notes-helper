@@ -1,34 +1,43 @@
-import { FaTimes } from 'react-icons/fa'
-import {Card, CardContent, CardHeader, Typography} from '@material-ui/core';
+import {Card, CardContent, CardHeader, Divider, Grid, List, Avatar, ListItem, ListItemAvatar, ListItemText, IconButton, Slide, ListItemSecondaryAction} from '@material-ui/core';
+import {Delete, Timelapse} from '@material-ui/icons'
 
 const Notes = ({noteList, onDelete, onPlayTime}) => {
-
     return (
 
-        <>
             <Card>
-                <CardHeader title="hi"/>
+                <CardContent>
+                    <CardHeader title="Notes" subheader="Click Timestamp to Review"/>
+                    <Divider/>
+                    <Grid container spacing={2}>
+                        <Grid item xs={12}>
+                            <List dense={false} style={{maxHeight: '250px', overflow: 'auto'}}>
+                                {noteList.map( (note) => (
+                                    <Slide direction="down" in mountOnEnter unmountOnExit key={note.id}>
+                                        <ListItem>
+                                            <ListItemAvatar>
+                                                <Avatar onClick={() => onPlayTime(note.time)}>
+                                                    <Timelapse  />
+                                                </Avatar>
+                                            </ListItemAvatar>
+                                            <ListItemText primary={note.title} secondary={note.text}/>
+                                            <ListItemSecondaryAction>
+                                                <IconButton edge="end" onClick={ () => onDelete(note.id)}>
+                                                    <Delete style={{color:'red'}} />
+                                                </IconButton>
+                                            </ListItemSecondaryAction>
+                                        </ListItem>
+                                    </Slide>
+                                ))}
+                            </List>
+                        </Grid>
+                    </Grid>
+                </CardContent>
+                
             </Card>
-            {noteList.map( (note) => (
-                <div id="tc-notes">
-                    <div className="tc-note">
-                        <FaTimes className="tc-cancel" onClick={ () => onDelete(note.id)} />
-                        <div className="tc-note-title">
-                            {note.title}
-                        </div>
-                        <div className="tc-note-body">
-                            <p>{note.text}</p>
+ 
 
-                        </div>
-                        <div id="timestampers">
 
-                            <input  className="timestamp-btn" onClick={() => onPlayTime(note.time)} type="submit" value="Play Timestamp"  />
-                            
-                        </div>
-                    </div>
-                </div>
-            ))}
-        </>
+
     )
 }
 
